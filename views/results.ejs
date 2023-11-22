@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+</head>
+<body>
+   <div class="container">
+    <%if(recipes){%>
+    <h1>Resultado</h1>
+    <ul>
+    <% recipes.forEach(recipe =>{%>
+        <li>
+            <a href="/recipe/<%=recipe.id%>">
+                <div class="recipe-card">
+                    <img class="recipe-image" src="<%=recipe.image%>" alt="">
+                    <h2 class="recipe-title"><%=recipe.title%></h2>
+                </div>
+            </a>
+        </li>
+    <%})%>
+    </ul>
+    <% } else { %> 
+        <h1>nao encontrado</h1>
+   <%}%>
+    <a href="/">
+        <p id="voltar">Voltar</p>
+    </a>
+   </div>
+      
+    
+</body>
+</html>
