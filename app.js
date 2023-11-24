@@ -5,7 +5,7 @@ const ejs = require("ejs")
 const app = express()
 const path = require("path")
 
-const key_api = "a51430a6da564c96be47ca64a0955a66"
+const key_api = "d62185cdf2fa4e5c90a34f61cdf2c437"
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
@@ -15,6 +15,10 @@ app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res) => {
     res.render('home')
+})
+
+app.get('/search', (req,res)=>{
+    res.render('results')
 })
 
 app.post('/search', async(req, res) => {
@@ -33,7 +37,17 @@ app.get('/recipe/:id', async(req,res)=>{
     res.render('recipe',{recipe})
 })
 
+app.get('/perfil', (req,res)=>{
+    res.render('profile')
+})
 
+app.get('/login',(req,res)=>{
+    res.render('login')
+})
+
+app.get('/info', (req,res) =>{
+    res.render('infoProfile')
+})
 
 app.listen(3000, () => {
     console.log("servidor ligado na porta 3000")

@@ -1,0 +1,233 @@
+
+body{
+    font-family: 'Julius Sans One', sans-serif;
+   
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.name-of-app{
+    margin: 5rem;
+}
+.perfil{
+    display: flex;
+    justify-content: right;
+    font-size: 1.5rem;
+}
+.perfil:hover{
+    color: #2cb8b2;
+}
+
+.person{
+    display: flex;
+    justify-content: right;
+    margin: 50px 50px 0 0 ;
+}
+
+.person img{
+    width: 30px;
+    height: 30px;
+}
+
+.busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.pesquisa{
+    width: 30rem;
+    height: 2.5rem;
+    border-radius:5px;
+    border-width: 0.5px;
+    padding: 5px 20px;
+    border: none;
+    background-color:#2cb8b2;
+    color: #fff;
+    font-family:  'Julius Sans One', sans-serif;
+}
+
+.pesquisa::placeholder{
+    color: #fff;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1rem;
+
+}
+
+.button-search{
+    width: 4rem;
+    border-radius: 20%;
+    border: none;
+    padding: 20px 10px;
+    
+}
+
+.tipo-de-comida{
+    display: flex;
+   justify-content: space-around;
+    flex-direction: column;
+    width: 30rem;
+    height: 50rem;
+    margin-left: 10rem;
+    padding-bottom:10rem;
+}
+
+.footer{
+    height: 5rem;
+    background-color:#6b6b6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h1{
+    font-size: 20px;
+    
+    color: #fff;
+
+}
+
+/*Results*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.container h1{
+   font-size: 1.5rem;
+   margin: 5rem 5rem;
+}
+
+.lista-resultado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 5rem;
+    margin-bottom: 5rem;
+}
+
+.recipe-card, .recipe-title{
+    margin-top: 10px;
+}
+
+.recipe-title:hover{
+    color: #2cb8b2;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.recipe-card{
+   width: 20rem; 
+   margin: 2rem 3rem;
+}
+
+#voltar{
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+#voltar:hover{
+    color: #2cb8b2;
+}
+
+/*recipe*/
+
+.about-recipe{
+    margin: 3rem 0;
+}
+
+.text-recipe{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    width: 40rem;
+    text-align: left;
+}
+
+.text-recipe li{
+    margin-top: 2px;
+}
+/*profile*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EDDCD9;
+    height: auto;
+    width: auto;
+    border: 2px solid #264143;
+    border-radius: 20px;
+    box-shadow: 3px 4px 0px 1px #E99F4C;
+  }
+  
+  .title {
+    color: #264143;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .sub_title {
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px;
+  }
+  
+  .form_style {
+    outline: none;
+    border: 2px solid #264143;
+    box-shadow: 3px 4px 0px 1px #E99F4C;
+    width: 290px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  
+  .form_style:focus, .btn:focus {
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #E99F4C;
+  }
+  
+  .btn {
+    padding: 15px;
+    margin: 25px 0px;
+    width: 290px;
+    font-size: 15px;
+    background: #DE5499;
+    border-radius: 10px;
+    font-weight: 800;
+    box-shadow: 3px 3px 0px 0px #E99F4C;
+  }
+  
+  .btn:hover {
+    opacity: .9;
+  }
+  
+  .link {
+    font-weight: 800;
+    color: #264143;
+    padding: 5px;
+    margin-bottom: 8rem;
+  }

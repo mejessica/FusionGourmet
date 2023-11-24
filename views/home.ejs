@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Página inicial</title>
-</head>
-<body>
-    <h1>FusionGourmet</h1>
-    <div>
-        <h2>Busca</h2>
-        <form class="busca" action="/search" method="POST">
-            <input type="text" name="query"> <button type="submit">Buscar</button>
-        </form>
-    </div>
-    <div>
+<%- include('partials/head') %>
+
+<div>
+    <form class="busca" action="/search" method="POST">
+        <input class="pesquisa" placeholder="Qual a receita de hoje?" type="text" name="query">
+        <input class="button-search" type="image" src="/image/search_locate_find_icon-icons.com_67287.png"></input>
+    </form>
+</div>
+    <div class="tipo-de-comida">
         <h2>populares</h2>
 
         <h2>veganos</h2>
     </div>
 
-    <a href="/perfil">perfil</a>
-    <p><a href="/culinariasEspecificas">culinárias</a></p>
-
-</body>
-</html>
+    <%- include('partials/footer') %>

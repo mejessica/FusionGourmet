@@ -1,34 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('partials/head') %>
 
 <body>
+    <div>
+        <form class="busca" action="/search" method="POST">
+            <input class="pesquisa" placeholder="Qual a receita de hoje?" type="text" name="query">
+            <input class="button-search" type="image" src="/image/search_locate_find_icon-icons.com_67287.png"></input>
+        </form>
+    </div>
     <div class="container">
-        <h1>
+        <h1 class="recipe-title">
             <%=recipe.title%>
         </h1>
-        <img src="<%=recipe.image%>" alt="">
-        <h2>Ingredientes</h2>
-        <ul>
+        <img class="recipe-img" src="<%=recipe.image%>" alt="">
+        <h2 class="about-recipe">Ingredientes</h2>
+        <ul  class="text-recipe">
             <%recipe.extendedIngredients.forEach(ingredient=> { %>
                 <li><%=ingredient.original%></li>
                 <%})%>
         </ul>
-        <h2>Instruções</h2>
-        <ol>
+        <h2 class="about-recipe">Instruções</h2>
+        <ol class="text-recipe">
             <%recipe.analyzedInstructions[0].steps.forEach(step =>{ %>
                 <li><%=step.step%></li>
             <%})%>
         </ol>
-        <a href="/results">
+        <a href="/">
             <p id="voltar">Voltar</p>
         </a>
     </div>
-</body>
-
-</html>
+    <%- include('partials/footer') %>

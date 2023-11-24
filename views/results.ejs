@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resultado</title>
-</head>
+<%- include('partials/head') %>
 <body>
+    <div>
+        <form class="busca" action="/search" method="POST">
+            <input class="pesquisa" placeholder="Qual a receita de hoje?" type="text" name="query">
+            <input class="button-search" type="image" src="/image/search_locate_find_icon-icons.com_67287.png"></input>
+        </form>
+    </div>
    <div class="container">
     <%if(recipes){%>
-    <h1>Resultado</h1>
-    <ul>
+    <h1>Aqui estão alguns resultados para sua busca</h1>
+    <ul class="lista-resultado">
     <% recipes.forEach(recipe =>{%>
-        <li>
+        <li >
             <a href="/recipe/<%=recipe.id%>">
                 <div class="recipe-card">
                     <img class="recipe-image" src="<%=recipe.image%>" alt="">
@@ -30,6 +29,4 @@
     </a>
    </div>
       
-    
-</body>
-</html>
+   <%- include('partials/footer') %>
