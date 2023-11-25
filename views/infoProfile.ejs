@@ -1,5 +1,17 @@
 <%- include('partials/head') %>
 
+<li><a href="/logout">Logout</a></li>
 
+<h2>Minhas receitas favoritas</h2>
+
+<% if(recipes.length > 0) { %>
+    <ul class="lista">
+        <% for(recipe of recipes) { %>
+            <li class="recipeFav"><a href="/recipe/<%=recipe.id%>"><%= recipe.title %></a></li>
+        <% } %>
+    </ul>
+<% } else { %>
+    <h3>Sua lista está vazia.</h3>
+<% } %>
 
 <%- include('partials/footer') %>

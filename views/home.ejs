@@ -5,11 +5,36 @@
         <input class="pesquisa" placeholder="Qual a receita de hoje?" type="text" name="query">
         <input class="button-search" type="image" src="/image/search_locate_find_icon-icons.com_67287.png"></input>
     </form>
-</div>
-    <div class="tipo-de-comida">
-        <h2>populares</h2>
+    
+    <h2 class="recado">Pesquise a culinária do mundo todo, receitas para seu jantar, comidas diet e veganas, sem lacotese e mais!</h2>
+    <div class="container">
+        <h1>Ideias para o café da manhã</h2>
+        <ul class="lista-resultado">
+            <% cakeRecipes.forEach(recipe => { %>
+              <li>
+                <a href="/recipe/<%= recipe.id %>">
+                  <div class="recipe-card">
+                    <img class="recipe-image" src="<%= recipe.image %>" alt="">
+                    <h2 class="recipe-title"><%= recipe.title %></h2>
+                  </div>
+                </a>
+              </li>
+            <% }) %>
+          </ul>
 
-        <h2>veganos</h2>
+        <h1>Receitas Vegetarianas</h2>
+        <ul class="lista-resultado">
+            <% vegetarianRecipes.forEach(recipe => { %>
+              <li>
+                <a href="/recipe/<%= recipe.id %>">
+                  <div class="recipe-card">
+                    <img class="recipe-image" src="<%= recipe.image %>" alt="">
+                    <h2 class="recipe-title"><%= recipe.title %></h2>
+                  </div>
+                </a>
+              </li>
+            <% }) %>
+          </ul>
     </div>
 
     <%- include('partials/footer') %>

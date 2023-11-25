@@ -11,41 +11,47 @@ app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
 
 app.use(express.static(path.join(__dirname, "public")))
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.render('home')
+app.get('/', async (req, res) => {
+    const responseVegetarian = await axios.get(` https://api.spoonacular.com/recipes/random?number=4&tags=vegetarian&apiKey=${key_api}`)
+    const vegetarianRecipes = responseVegetarian.data.recipes;
+
+    const responseCake = await axios.get(` https://api.spoonacular.com/recipes/random?number=4&tags=breakfast&apiKey=${key_api}`)
+    const cakeRecipes = responseCake.data.recipes;
+
+
+    res.render('home', { cakeRecipes, vegetarianRecipes })
 })
-
-app.get('/search', (req,res)=>{
+app.get('/search', (req, res) => {
     res.render('results')
 })
 
-app.post('/search', async(req, res) => {
+app.post('/search', async (req, res) => {
 
-   const {query} = req.body;
-   const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${key_api}`)
-   const recipes = response.data.results;
-   res.render('results', {recipes})
+    const { query } = req.body;
+    const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${key_api}`)
+    const recipes = response.data.results;
+    res.render('results', { recipes })
 })
 
 
-app.get('/recipe/:id', async(req,res)=>{
-    const {id} = req.params;
+app.get('/recipe/:id', async (req, res) => {
+    const { id } = req.params;
     const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${key_api}`)
     const recipe = response.data;
-    res.render('recipe',{recipe})
+    res.render('recipe', { recipe })
 })
 
-app.get('/perfil', (req,res)=>{
+app.get('/perfil', (req, res) => {
     res.render('profile')
 })
 
-app.get('/login',(req,res)=>{
+app.get('/login', (req, res) => {
     res.render('login')
 })
 
-app.get('/info', (req,res) =>{
+app.get('/infoProfile', (req, res) => {
     res.render('infoProfile')
 })
 
