@@ -119,6 +119,8 @@ body{
     background-color: #d6abb1;
     border-radius: 5%;
     padding: 20px;
+    width: auto;
+    height: auto;
 }
 
 .recipe-card:hover{
