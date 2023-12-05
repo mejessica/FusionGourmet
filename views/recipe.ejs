@@ -8,34 +8,41 @@
         </form>
     </div>
     <div class="container">
+     
         <h1 class="recipe-title">
             <%=recipe.title%>
         </h1>
         <img class="recipe-img" src="<%=recipe.image%>" alt="">
         <h2 class="about-recipe">Ingredientes</h2>
         <ul  class="text-recipe">
-            <%recipe.extendedIngredients.forEach(ingredient=> { %>
-                <li><%=ingredient.original%></li>
-                <%})%>
+          <% if (recipe.extendedIngredients && recipe.extendedIngredients.length > 0) { %>
+            <h2 class="about-recipe">Ingredientes</h2>
+            <ul class="text-recipe">
+                <% recipe.extendedIngredients.forEach(ingredient => { %>
+                    <li><%= ingredient.original %></li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>Nenhum ingrediente disponível.</p>
+        <% } %>
         </ul>
         <h2 class="about-recipe">Instruções</h2>
         <ol class="text-recipe">
-            <%recipe.analyzedInstructions[0].steps.forEach(step =>{ %>
-                <li><%=step.step%></li>
-            <%})%>
+          <% if (recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0 && recipe.analyzedInstructions[0].steps) { %>
+            <ol class="text-recipe">
+                <% recipe.analyzedInstructions[0].steps.forEach(step => { %>
+                    <li><%= step.step %></li>
+                <% }) %>
+            </ol>
+        <% } else { %>
+            <p>Nenhuma instrução disponível.</p>
+        <% } %>
         </ol>
        <br>
        <br>
-        <label class="ui-bookmark">
-            <input type="checkbox">
-            <div class="bookmark">
-              <svg viewBox="0 0 32 32">
-                <g>
-                  <path d="M27 4v27a1 1 0 0 1-1.625.781L16 24.281l-9.375 7.5A1 1 0 0 1 5 31V4a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4z"></path>
-                </g>
-              </svg>
-            </div>
-          </label>
+       <form action="/infoProfile/<%=recipe.id%>" method="POST">
+        <button class="btn">Adicionar à minha lista</button>
+        </form>
           <br>
           <br>
         <a href="/">
