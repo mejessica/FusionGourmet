@@ -54,6 +54,7 @@ app.get('/', async (req, res) => {
 
     res.render('home', { cakeRecipes, vegetarianRecipes })
 })
+
 app.get('/search', (req, res) => {
     res.render('results')
 })
@@ -63,11 +64,10 @@ app.post('/search', async (req, res) => {
     const { query } = req.body;
     const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${key_api}`)
     const recipes = response.data.results;
-    res.render('results', { recipes })
+    res.render('results', { recipes, query })
 })
 
-
-app.get('/recipe/:id', async (req, res) => {
+app.get('/recipe/:id/', async (req, res) => {
     const { id } = req.params;
     const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${key_api}`)
     const recipe = response.data;
@@ -82,7 +82,7 @@ app.get("/register", (req, res) => {
 })
 
 app.post("/register", async (req, res) => {
-    User.register(new User({ username: req.body.username, email: req.body.email }), req.body.password, (err, user) => {
+    User.register(new User({ username: req.body.username, name: req.body.name }), req.body.password, (err, user) => {
         if (err) {
             console.log(err)
             res.render("register")
@@ -98,14 +98,16 @@ app.get('/login', (req, res) => {
     res.render('login')
 })
 
-app.post('/login', passport.authenticate('local', { 
-    failureMessage: true, 
-    failureRedirect: '/register'}), (req,res)=>{
-        const redirectUrl = req.session.returnTo || '/';
-        delete req.session.returnTo;
-        res.redirect(redirectUrl)
-    }),
-  
+app.post('/login', passport.authenticate('local', {
+    failureMessage: true,
+    failureRedirect: '/register'
+}), (req, res) => {
+    const redirectUrl = req.session.returnTo || '/';
+    delete req.session.returnTo;
+    res.redirect(redirectUrl)
+}),
+
+
 app.get("/logout", (req, res) => {
     req.logOut(() => {
         console.log("Sessão encerrada")
@@ -114,7 +116,7 @@ app.get("/logout", (req, res) => {
 })
 
 app.get('/infoProfile', isLoggedIn, async (req, res) => {
-    const recipe = await Receita.find({})
+    const recipe = await Receita.find({idUser:res.locals.currentUser._id})
     res.render('recipes/infoProfile', { recipe })
 })
 
@@ -131,7 +133,7 @@ app.post('/infoProfile/:id', async (req, res) => {
             const receitaFavoritada = await Receita.find({ title: recipe.title });
 
             if (receitaFavoritada.length === 0) {
-                const novaFavorita = new Receita({ title: recipe.title, id: recipe.id });
+                const novaFavorita = new Receita({ title: recipe.title, id: recipe.id, idUser:res.locals.currentUser._id});
                 await novaFavorita.save();
                 console.log("Receita salva!");
                 res.redirect('/infoProfile')
