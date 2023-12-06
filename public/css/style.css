@@ -1,112 +1,116 @@
-html{
+html {
   height: 100vh;
 }
 
-body{
+body {
   font-family: 'Julius Sans One', sans-serif;
 
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
 }
-.name-of-app{
+
+.name-of-app {
   margin: 5rem;
 }
-.perfil{
+
+.perfil {
   display: flex;
   justify-content: right;
   font-size: 1.5rem;
 }
-.perfil:hover{
+
+.perfil:hover {
   color: #2cb8b2;
   transition: all .2s ease-in-out;
 }
 
-.person{
+.person {
   display: flex;
   justify-content: right;
-  margin: 50px 50px 0 0 ;
+  margin: 50px 50px 0 0;
 }
 
-.person img{
+.person img {
   width: 30px;
   height: 30px;
 }
 
-.busca{
+.busca {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
 }
 
-.pesquisa{
+.pesquisa {
   width: 30rem;
   height: 2.5rem;
-  border-radius:5px;
+  border-radius: 5px;
   border-width: 0.5px;
   padding: 5px 20px;
   border: none;
-  background-color:#2cb8b2;
+  background-color: #2cb8b2;
   color: #fff;
-  font-family:  'Julius Sans One', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
-.pesquisa::placeholder{
+.pesquisa::placeholder {
   color: #fff;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 1rem;
 
 }
 
-.button-search{
+.button-search {
   width: 4rem;
   border-radius: 20%;
   border: none;
   padding: 20px 10px;
-  
+
 }
 
-.recado{
+.recado {
   font-size: 15px;
-  width:100%;
+  width: 100%;
   padding: auto;
   text-align: center;
   color: #6b6b6b;
 }
 
-.footer{
+.footer {
   height: 5rem;
-  background-color:#6b6b6b;
+  background-color: #6b6b6b;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer h1{
+.footer h1 {
   font-size: 20px;
-  
+
   color: #fff;
 
 }
 
 /*Results*/
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
 
-.container h1{
- font-size: 1.5rem;
- margin: 5rem 5rem;
- padding: 2px 5px ;
- border-bottom: double 2px #d6abb1;
+.container h1 {
+  font-size: 1.5rem;
+  margin: 5rem 5rem;
+  padding: 2px 5px;
+  border-bottom: double 2px #d6abb1;
 }
 
-.lista-resultado{
+.lista-resultado {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,7 +119,7 @@ body{
   margin-bottom: 5rem;
 }
 
-.recipe-card{
+.recipe-card {
   background-color: #d6abb1;
   border-radius: 5%;
   padding: 20px;
@@ -123,40 +127,41 @@ body{
   height: auto;
 }
 
-.recipe-card:hover{
+.recipe-card:hover {
   transform: scale(1.04);
   transition: all .2s ease-in-out;
 }
 
-.recipe-card, .recipe-title{
+.recipe-card,
+.recipe-title {
   margin: 10px 0;
 }
 
-img{
+img {
   border-radius: 20px;
 }
 
-.recipe-card{
- width: 20rem; 
- margin: 2rem 3rem;
+.recipe-card {
+  width: 20rem;
+  margin: 2rem 3rem;
 }
 
-#voltar{
+#voltar {
   font-size: 1.5rem;
   margin-bottom: 5rem;
 }
 
-#voltar:hover{
+#voltar:hover {
   color: #2cb8b2;
 }
 
 /*recipe*/
 
-.about-recipe{
+.about-recipe {
   margin: 3rem 0;
 }
 
-.text-recipe{
+.text-recipe {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   margin-bottom: 2rem;
@@ -164,9 +169,10 @@ img{
   text-align: left;
 }
 
-.text-recipe li{
+.text-recipe li {
   margin-top: 2px;
 }
+
 /*profile*/
 .container {
   display: flex;
@@ -218,7 +224,8 @@ img{
   font-size: 15px;
 }
 
-.form_style:focus, .btn:focus {
+.form_style:focus,
+.btn:focus {
   transform: translateY(4px);
   box-shadow: 1px 2px 0px 0px #E99F4C;
 }
@@ -245,7 +252,7 @@ img{
   margin-bottom: 8rem;
 }
 
-#favoritos{
+#favoritos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,15 +263,17 @@ img{
   padding: 2rem;
   border-radius: 10px;
 }
-#favoritos li{
-margin-top: 5px;
-font-size: 1.5rem;
-}
-#favoritos li:hover{
-transition: 0.2s;
-color: #EDDCD9;
+
+#favoritos li {
+  margin-top: 5px;
+  font-size: 1.5rem;
 }
 
-#title-fav{
-margin-top: 0;
+#favoritos li:hover {
+  transition: 0.2s;
+  color: #EDDCD9;
+}
+
+#title-fav {
+  margin-top: 0;
 }

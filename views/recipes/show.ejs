@@ -40,7 +40,7 @@
         <form id="f" action="/infoProfile/<%= recipe.id %>?_method=DELETE" method="post">
             <button class="btn" type="button" onClick="confirm('Tem certeza que deseja apagar a receita <%= recipe.title %>?') ? document.getElementById('f').submit() : false">Remover da minha lista</button>
         </form>
-        <a href="/">
+        <a href="/infoProfile">
             <p id="voltar">Voltar</p>
         </a>
     </div>

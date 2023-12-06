@@ -1,20 +1,43 @@
-<%- include('partials/head') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>FusionGourmet</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href='/'>
+            <h1 class="name-of-app">FusionGourmet</h1>
+        </a>
+    </div>
 
     <div class="container">
         <div class="form_area">
             <p class="title">SIGN UP</p>
             <form action="/register" method="POST">
                 <div class="form_group">
-                    <label class="sub_title" for="username">Name</label>
-                    <input placeholder="Enter your full name" class="form_style" name="username" type="text">
+                    <label class="sub_title" for="username">Username</label>
+                    <input placeholder="Enter your full name" class="form_style" id="username" name="username" type="text" required>
                 </div>
                 <div class="form_group">
                     <label class="sub_title" for="email">Email</label>
-                    <input placeholder="Enter your email" id="email" class="form_style" name="email" type="email">
+                    <input placeholder="Enter your email" id="email" class="form_style" name="email" type="email" required>
                 </div>
                 <div class="form_group">
                     <label class="sub_title" for="password">Password</label>
-                    <input placeholder="Enter your password" id="password" name="password" class="form_style" type="password">
+                    <input placeholder="Enter your password" id="password" name="password" class="form_style" type="password" required>
                 </div>
                 <div>
                     <button class="btn">SIGN UP</button>
