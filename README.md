@@ -1,7 +1,61 @@
 # Fusion Gourmet
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![pngwing com (1)](https://github.com/mejessica/FusionGourmet/assets/82670472/d17ff404-904f-48f1-b48a-9605e71d512a)
 
-## Como está ficando
+Projeto de um site de pesquisa de receitas utilizando uma API com a opção de salvar suas receitas favoritas. 
 
-![FusionGourmet (1)](https://github.com/mejessica/FusionGourmet/assets/82670472/cd79f9de-9a87-41a7-8f3f-cb9f14b36e9b)
+
+### Features
+
+- [x] Cadastro de usuário
+- [x] Salvar receitas favoritas
+- [x] Pesquisar por nome, ingrediente, tipo de comida...
+- [ ] Voltar para onde estava após o login 
+- [ ] Voltar da receita pesquisada para as pesquisas encontradas 
+
+<h4 align="center"> 
+	🚧  Fusion Gourmet 🚀 Implementando funcionalidades...  🚧
+</h4>
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e [MongoDB](https://www.mongodb.com/download-center/community/releases)
+
+### 🎲 Rodando o Back End (servidor) - precisa ter MongoDB instalado. 
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/mejessica/FusionGourmet.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd FusionGourmet
+
+# Instale as dependências
+$ npm install
+
+# Certifique-se de ter instalado o Mongodb e rodado no prompt assim como, se preferir, rodando o Compass
+
+# Execute a aplicação em modo de desenvolvimento
+$ node app
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- Node.js 
+- Express.js
+- MongoDB
+- CSS
+- EJS
+- [API Spoonacular](https://spoonacular.com/food-api)
+- [Passport.js](https://www.passportjs.org/)
+
+### Autor
+---
+
+Feito com ❤️ por Jéssica Gelsdorf e Sarah Picenni 👋🏽 Entre em contato!
+
