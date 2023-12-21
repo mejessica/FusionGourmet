@@ -59,4 +59,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Feito com ❤️ por Jéssica Gelsdorf e Sarah Picenni 👋🏽 Entre em contato!
 
-### Como está ficando
+### Final
+![FusionGourmet (2)](https://github.com/mejessica/FusionGourmet/assets/82670472/db491be7-88d4-4d73-ab3e-0d8f289cabbd)
