@@ -1,6 +1,8 @@
 # Fusion Gourmet
 
-![pngwing com (1)](https://github.com/mejessica/FusionGourmet/assets/82670472/d17ff404-904f-48f1-b48a-9605e71d512a)
+<h4 align="center"> 
+	🚧  Fusion Gourmet 🚀 Implementando funcionalidades...  🚧
+</h4>
 
 Projeto de um site de pesquisa de receitas utilizando uma API com a opção de salvar suas receitas favoritas. 
 
@@ -13,9 +15,7 @@ Projeto de um site de pesquisa de receitas utilizando uma API com a opção de s
 - [ ] Voltar para onde estava após o login 
 - [ ] Voltar da receita pesquisada para as pesquisas encontradas 
 
-<h4 align="center"> 
-	🚧  Fusion Gourmet 🚀 Implementando funcionalidades...  🚧
-</h4>
+
 
 ### Pré-requisitos
 
@@ -59,3 +59,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Feito com ❤️ por Jéssica Gelsdorf e Sarah Picenni 👋🏽 Entre em contato!
 
+### Como está ficando
